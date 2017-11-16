@@ -29,11 +29,16 @@ npm run server:dev
 ```bash
 npm run client:dev
 ```
-- to to build for production
+- to build for production (this builds the server and the client in a dist folder respectively)
 ```bash
 npm run build
 ```
 - to start the app in production
+simulate production environment
+```bash
+export $NODE_ENV=production
+```
+start the app
 ```bash
 npm start
 ```
