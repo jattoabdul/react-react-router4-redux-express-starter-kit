@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 /**
- * Display Home
- * @class Home
+ * Display Not Found page
+ * 
  * @param {any} props
  * @return {dom} DomeElement
  */

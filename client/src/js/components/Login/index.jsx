@@ -81,6 +81,7 @@ export class Login extends React.Component {
 
   /**
    * onLoginUser Method
+   * this dispatches the loginActionCreator in our actions file
    * 
    * @param {event} event
    * 
@@ -220,17 +221,21 @@ export class Login extends React.Component {
   }
 }
 
+// Define Proptypes
 Login.propTypes = {
   loginActionCreator: PropTypes.func.isRequired,
   authData: PropTypes.objectOf(String).isRequired,
   history: PropTypes.objectOf(String).isRequired
 };
 
+// connect to your required actions for this component
 const mapDispatchToProps = {
   loginActionCreator
 };
 
 /**
+ * connect to the required state of data in the store
+ * for this component
  * 
  * @param {object} Authdata
  * 
@@ -242,4 +247,5 @@ function mapStateToProps({ authData }) {
   };
 }
 
+// connect to redux
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Login));

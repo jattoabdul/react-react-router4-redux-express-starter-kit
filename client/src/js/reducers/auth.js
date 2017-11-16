@@ -6,6 +6,7 @@ import {
   GET_USERS_FAIL,
   LOGOUT_USER } from '../constants';
 
+  // initial application states for this auth reducers
   const initialState = {
     isAuthenticated: false,
     token: '',
@@ -15,9 +16,17 @@ import {
     errorMessage: ''
   };
 
+  // the reducer method that only recieves the initial state
+  // the action (type and payload) as an object
   const authData = (state = initialState, action) => {
+    // cloning the state because react repels mutating state
     const newState = cloneDeep(state);
+
+    // deconstructuring the type and possible payload from the action
     const { type, token, currentUserData, allUsersData, successMessage, errorMessage } = action;
+
+    // a switch statement to define the changes to be made with the data in the state
+    // for any particular type as a case
     switch (type) {
       case LOGIN_USER_SUCCESS:
         return {

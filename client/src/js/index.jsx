@@ -18,6 +18,7 @@ const store = configureStore();
 const app = document.getElementById('root');
 
 /**
+ * check sessionStorage for authed user
  * @param {void} void
  * @return {object} authState
  */
@@ -26,6 +27,7 @@ const isAuthenticated = () => {
   return authState;
 };
 
+// React Router that defines Routes and Wrapped with Redux store Provider
 render(
   <Provider store={store}>
     <Router>

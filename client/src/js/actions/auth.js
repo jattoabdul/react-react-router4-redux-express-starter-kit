@@ -6,6 +6,7 @@ import {
   GET_USERS_FAIL,
   LOGOUT_USER } from '../constants';
 
+  // login actions that only returns a type and a payload(data we want to pass to our reducer)
   export function loginAction (res) {
     return {
       type: LOGIN_USER_SUCCESS,
@@ -28,6 +29,8 @@ import {
     }
   };
 
+  // login action creator that calls our api, gets the data, 
+  // then dispatches our login action with the necessary payload it got from the API response
   export const loginActionCreator = ({ username, password }) => dispatch => {
       const request = axios({
         method: 'POST',

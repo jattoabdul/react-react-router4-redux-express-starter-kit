@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 /**
  * Display Home
- * @class Home
+ * 
  * @param {any} props
  * @return {dom} DomeElement
  */
